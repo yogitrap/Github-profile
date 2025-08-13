@@ -1,0 +1,213 @@
+html{
+    font-size: 1vh;
+}
+*{
+    color: white;
+    box-sizing: border-box;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+}
+.container{
+    margin: auto;
+    position: relative;
+    max-width: 70vw;
+    min-height: 70vh;
+    height: fit-content;
+    padding-top: 5vh;
+    padding-bottom: 5vh;
+    padding-left: 5vw;
+    padding-right: 5vw;
+    background-color: #20293a;
+}
+
+.background{
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+    height: 13vh;
+    background-image: url(hero-image-github-profile.jpg);
+}
+.desc_container{
+    position: relative;
+    width: 30%;
+    height: 60%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.desc_container .username{
+    width: 100%;
+    height: 35%;
+    border-radius: 9px;
+    background-color: #20293a;
+    display: flex;
+    align-items: center;
+}
+.desc_container .username::before{
+    content: "";
+    background-image: url(Search.svg);
+    height: 20px;
+    width: 20px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+.desc_container .github_intro{
+    width: 100%;
+    height: 60%;
+    border-radius: 9px;
+    background-color: #111629;
+    margin-top: 2.5%;
+    display: flex;
+    align-items: center;
+}
+/* .github_intro *{
+    margin: 0;
+}
+.github_intro .icon{
+    display: inline-block;
+    height: 50px;
+    width: 50px;
+    top: 10%;
+    margin-left: 5%;
+    margin-right: 5%;
+    background-image: url(github-icon-38976.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-color: black;
+    background-position: 50%;
+} */
+.content{
+    top: 5vh;
+    position: relative;
+    margin-bottom: 5vh;
+}
+.profile_info{
+    position: relative;
+    display: flex;
+    align-items: end;
+    flex-wrap: wrap;
+}
+.profile_info > div:not([class="logo"]):not([class="break"]){
+    width: fit-content;
+    height: fit-content;
+    padding: 1rem;
+    background-color: #111629;
+    display: inline-flex;
+    align-items: center;
+    border-radius: 7px;
+    margin: 10px;
+    margin-bottom: 0;
+}
+
+.start_line{
+    width: 1px;
+    height: 2rem;
+    background-color: white;
+    padding: 0;
+    display: inline-block;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+.profile_info .logo{
+    height: 10vh;
+    width: 10vh;
+    display: inline-block;
+    background-image: url(github-icon-38976.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-color: black;
+    border-radius: 7px;
+    border: 5px solid #20293a;
+    border-bottom: 0;
+}
+
+.followers::before{
+    content: "Followers";
+}
+.followers::after{
+    content: "27839";
+}
+.Following::before{
+    content: "Following";
+}
+.Following::after{
+    content: "0";
+}
+.Location::before{
+    content: "Location";
+}
+.Location::after{
+    content: "San Francisco";
+}
+
+.project_container{
+    display: flex;
+    overflow-y: auto;
+    flex-wrap: wrap;
+    width: calc(100%);
+    justify-content: space-between;
+}
+
+.project_container > div{
+    min-width: calc(50% - 3rem);
+    max-width: calc(50% - 3rem);
+    padding: 1.5rem;
+    margin-top: 8px;
+    background-image: linear-gradient(to right, #141830 50%, #1d1b48 100%);
+    border-radius: 7px;
+}
+
+.project_container > div .stats div{
+    display: inline-flex;
+    margin-right: 1rem;
+    align-items: flex-end;
+}
+
+.project_container > div *:not(h3){
+    color: #939fb1;
+}
+
+.view_all{
+    position: absolute;
+    bottom: 2vh;
+    left: calc(50% - 5vw);
+}
+
+.project_container > div .stats div::before{
+    content: "";
+    display: inline-block;
+    height: 1.5rem;
+    width: 1.5rem;
+    background-size: contain;
+}
+
+.MIT::before{
+    background-image: url(Chield_alt.svg);
+}
+.views::before{
+    background-image: url(Nesting.svg);
+}
+.favourites::before{
+    background-image: url(Star.svg);
+
+}
+@media (max-width:640px){
+    .container{
+        min-height: 100vh;
+        max-width: 90vw;
+    }
+    .desc_container{
+        top: 10%;
+        transform: translate(-50%, 0);
+        width: 90%;
+    }
+   .project_container > div{
+        min-width: 100%;
+        max-width: 100%;
+    } 
+    .break{
+        flex-basis: 100%;
+    }
+}
