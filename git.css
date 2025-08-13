@@ -1,5 +1,5 @@
 html{
-    font-size: 2vh;
+    font-size: 1vh;
 }
 *{
     color: white;
@@ -194,9 +194,6 @@ html{
 
 }
 @media (max-width:640px){
-    html{
-        font-size:1vh;
-    }
     .desc_container{
         top: 10%;
         transform: translate(-50%, 0);
@@ -211,6 +208,7 @@ html{
     }
 
 }
+
 
 
 
