@@ -1,5 +1,5 @@
 html{
-    font-size: 1vh;
+    font-size: 2vh;
 }
 *{
     color: white;
@@ -194,6 +194,9 @@ html{
 
 }
 @media (max-width:640px){
+    html{
+        font-size: 1vh;
+    }
     .desc_container{
         top: 10%;
         transform: translate(-50%, 0);
@@ -206,7 +209,11 @@ html{
     .break{
         flex-basis: 100%;
     }
-
+}
+@media ((min-width:641px) and (max-width:999px)) or (min-height:1000px){
+    html{
+        font-size: 1vh;
+    }
 }
 
 
