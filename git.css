@@ -172,7 +172,7 @@ html{
 .view_all{
     position: absolute;
     bottom: 2vh;
-    left: calc(50% - 5vw);
+    left: calc(50% - 10vw);
 }
 
 .project_container > div .stats div::before{
@@ -211,5 +211,6 @@ html{
     }
 
 }
+
 
 
